@@ -21,7 +21,7 @@ def main():
         print("\u001b[34mEnter Version (Floating Point Number): ", end="")
         version = input()
         with open("properties.py", "w") as f:
-            default  = """emulate = True
+            default  = """emulate = False
 playing = "with my Infinite money"
 version = {}""".format(version)
             f.write(default)
