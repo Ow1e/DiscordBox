@@ -18,6 +18,15 @@ def main():
             subprocess.run(f"pip install {i}", shell=True)
 
         print("\u001b[32m\u001b[1mInstall complete\u001b[0m\n\u001b[31m\u001b[1mMake sure to have serial enabled\u001b[0m")
+        print("\u001b[34mEnter Version (Floating Point Number): ", end="")
+        version = input()
+        with open("properties.py", "w") as f:
+            default  = """emulate = True
+playing = "with my Infinite money"
+version = {}""".format(version)
+            f.write(default)
+        print("\u001b[35mCompleted properties changes\u001b[0m")
+            
     else:
         print("Please give permisions before running script")
 
